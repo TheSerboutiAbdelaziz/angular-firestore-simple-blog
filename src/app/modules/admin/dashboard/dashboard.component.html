@@ -1,0 +1,22 @@
+<div class="dashboard py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-center text-uppercase font-weight-bold my-3 py-">{{ getCurrentPageName() }}</h3>
+				<ul class="nav text-uppercase font-weight-bold justify-content-center my-4">
+					  <li class="nav-item">
+					    <a class="nav-link text-dark" [routerLink]="['/dashboard/manage-posts']">Manage posts</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link text-dark" [routerLink]="['/dashboard/manage-contacts']">Manage contacts</a>
+					  </li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">	
+			<div class="col-md-8 m-auto">	
+				<router-outlet></router-outlet>	
+			</div>
+		</div>
+	</div>		
+</div>

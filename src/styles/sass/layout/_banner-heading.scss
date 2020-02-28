@@ -1,0 +1,22 @@
+//==============================================================================================
+// BANNER HEADING
+//==============================================================================================
+
+.banner-heading{
+	background-image: url(/assets/images/slides/banner-img.jpeg);
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 60px 0;
+	margin-bottom: 50px;
+
+	.overlay{
+		@extend %overlay;
+		background-color: rgba(0,0,0,0.8);
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center; }
+}

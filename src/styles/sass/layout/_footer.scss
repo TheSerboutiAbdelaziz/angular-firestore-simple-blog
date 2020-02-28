@@ -1,0 +1,27 @@
+//==============================================================================================
+// FOOTER
+//==============================================================================================
+
+footer{
+	background-color: $color-secondary-1;
+	color: $text-color;
+
+	a{
+		text-decoration: none;
+		color: $text-color;
+		font-size: 13px; }
+
+	p{
+		color: $text-color;
+		font-size: 13px; }
+
+	.media{ 
+		a{
+			background: $color-secondary-2; 
+			text-align:center;
+			display:block;
+			width: 40px;
+			height:40px;
+			line-height:40px; }
+	}
+}

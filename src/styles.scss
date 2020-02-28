@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+// Import fonts
+$font1: "./styles/fonts/montserrat/Montserrat-Light.ttf";
+$font2: "./styles/fonts/quicksand/static/Quicksand-Light.ttf";
+
+@font-face {
+	font-family: "Montserrat";
+	src: url($font1);
+}
+
+@font-face {
+	font-family: "Quicksand";
+	src: url($font2);
+}
+
+// THe main sass fonts
+@import './styles/sass/main.scss';
+

@@ -1,0 +1,68 @@
+<div class="card mt-sm-2">
+	<div class="card-body">
+		<div class="alert alert-success rounded-0" *ngIf="flashMsg">
+			{{ flashMsg }}
+		</div>
+		<form novalidate #f="ngForm"  (ngSubmit)="createPost(f)">
+			
+			<div class="form-group mb-3">
+				<label for="postTitle" class="text-uppercase">Post title</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="postTitle" 
+					   aria-label="Amount (to the nearest dollar)"
+					   name="post_title"
+					   #post_title="ngModel" 
+					   ngModel
+					   required>
+			</div>
+			<div *ngIf="post_title.errors?.required && post_title.touched"
+				 class="alert alert-danger my-1 rounded-0">
+				Post title is required
+			</div>
+
+
+			<div class="form-group">
+			     <div class="custom-file">
+					  <input type="file" 
+					  		 class="custom-file-input" 
+					  		 id="customFile"
+					  		 name="post_img"
+					         #post_img
+					         ngModel 
+					         required/>
+					  <label class="custom-file-label" for="customFile">Choose file</label>
+				</div>								
+			</div>
+			<div *ngIf="post_img.errors?.required && post_img.touched"
+				 class="alert alert-danger my-1 rounded-0">
+				Post image is required
+			</div>
+
+			<div class="form-group">
+				<label for="postContent" class="text-uppercase">Post Content</label>
+				<textarea name="" 
+				          class="form-control"
+				          id="postContent" 
+				          cols="20" 
+				          rows="10" 
+					      name="post_desc"
+					      #post_desc="ngModel" 
+					      ngModel
+					      required>
+				</textarea>
+			</div>
+			<div *ngIf="post_desc.errors?.required && post_desc.touched"
+				 class="alert alert-danger my-1 rounded-0">
+				Post content is required
+			</div>
+
+			<button [disabled]="f.invalid" 
+					type="submit"
+				    class="btn btn-dark text-uppercase">
+				Create post
+			</button>
+		</form>
+	</div>
+</div>	
+

@@ -1,0 +1,31 @@
+<table class="table text-center">
+  <thead class="thead-dark table-post">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Message</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>{{ contact.contact_username }}</td>
+        <td>{{ contact.contact_email }}</td>
+         <td>{{ contact.created_at.toDate()  | date:'short'}}</td>
+         <td>{{ contact.contact_message | slice:0:10}}</td>
+        <td>
+          <ul class="list-inline">
+             <li class="list-inline-item">
+              <button class="btn btn-primary" routerLink="/dashboard/manage-contacts/{{ contact.contact_id }}"><i class="fa fa-eye"></i></button>
+            </li>
+            <li class="list-inline-item">
+              <button class="btn btn-danger" (click)="deleteContact(contact.contact_id)"><i class="fa fa-times"></i></button>
+            </li>
+          </ul>
+        </td>
+      </tr>
+  </tbody>
+</table>  
+
+

@@ -1,0 +1,26 @@
+<div class="post-detail pb-5" *ngIf="post" >
+	<div class="post-detail-banner banner-heading">
+		<div class="overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 m-md-auto col-sm-12">
+						<h3 class="text-uppercase text-light font-weight-bold">{{ post.post_title }}</h3>
+						<p class="text-muted">Created at : {{ post.created_at.toDate()  | date:'short'}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 m-auto">
+				<img src="{{ post.post_img }}" class="img-fluid" alt="..." >
+				<div class="card mb-2">
+				  <div class="card-body">
+				    <p class="card-text">{{ post.post_desc }}</p>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

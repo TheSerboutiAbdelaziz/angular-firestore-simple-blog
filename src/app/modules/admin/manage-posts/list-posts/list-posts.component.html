@@ -1,0 +1,37 @@
+<div class="card mt-sm-2">
+  <div class="card-header bg-light">
+    <button class="btn btn-dark text-uppercase float-right" [routerLink]="['/dashboard/add-post']">Create post</button>
+  </div>
+  <div class="card-body">
+    <table class="table text-center">
+      <thead class="thead-dark table-post">
+        <tr>
+          <th scope="col">Post Title</th>
+          <th scope="col">Post Content </th>
+          <th scope="col">Created at </th>
+          <th scope="col">Manage Post</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of posts">
+          <td>{{ post.post_title | uppercase }}</td>
+          <td>{{ post.post_desc  | slice:0:10}}</td>
+          <td>{{ post.created_at.toDate()  | date:'short'}}</td>
+          <td>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <button class="btn btn-primary" routerLink="/posts/{{ post.post_id }}" ><i class="fa fa-eye"></i></button>
+              </li>
+              <li class="list-inline-item">
+                <button class="btn btn-danger" (click)="deletePost(post.post_id)"><i class="fa fa-times"></i>
+                </button>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

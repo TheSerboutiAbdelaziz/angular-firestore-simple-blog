@@ -1,0 +1,110 @@
+<div class="register-section py-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4 m-auto">
+              <div class="card rounded-0">
+                  <div class="card-header rounded-0 bg-dark text-center text-light">
+                      <h5 class="text-uppercase font-weight-bold py-2">Register</h5>
+                  </div>
+                  <div class="card-body">
+                      <form #f="ngForm" (ngSubmit)="authRegister(f)">
+                      <div class="alert alert-danger rounded-0 my-1" *ngIf="displayErrorMessage">
+                        {{displayErrorMessage}}
+                      </div>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                          </div>
+                          <input type="text" 
+                                 class="form-control" 
+                                 placeholder="Enter your name" 
+                                 aria-label="Amount (to the nearest dollar)"
+                                 name="user_name"
+                                 #user_name="ngModel" 
+                                 ngModel
+                                 required
+                                 >
+                        </div>
+                        <div *ngIf="user_name.invalid && user_name.touched" class="alert alert-danger my-1 rounded-0">
+                            Name is required
+                        </div>  
+
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                          </div>
+                          <input type="text" 
+                                 class="form-control" 
+                                 placeholder="Enter your email" 
+                                 aria-label="Amount (to the nearest dollar)"
+                                 name="user_email"
+                                 #user_email="ngModel" 
+                                 ngModel
+                                 required
+                                 email
+                                 >
+                        </div>
+                        <div *ngIf="user_email.errors?.required && user_email.touched" class="alert alert-danger my-1 rounded-0">
+                            Emeil is required
+                        </div>  
+                        <div *ngIf="user_email.errors?.email && user_email.touched" class="alert alert-danger my-1 rounded-0">
+                            Enter a vallid email
+                        </div>  
+
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                          </div>
+                          <input type="password" 
+                                 class="form-control" 
+                                 placeholder="Enter your password" 
+                                 aria-label="Amount (to the nearest dollar)"
+                                 name="user_password"
+                                 #user_password="ngModel" 
+                                 ngModel
+                                 required
+                                 minlength="6" 
+                                 >
+                        </div>
+                        <div *ngIf="user_password.errors?.required && user_password.touched" class="alert alert-danger my-1 rounded-0">
+                            Password is required
+                        </div>  
+                        <div *ngIf="user_password.errors?.minlength && user_password.touched" class="alert alert-danger my-1 rounded-0">
+                            Password should be 6 charachters
+                        </div>
+
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                          </div>
+                          <input type="password" 
+                                 class="form-control" 
+                                 placeholder="Confirm your password" 
+                                 aria-label="Amount (to the nearest dollar)"
+                                 name="user_password_confirm"
+                                 #user_password_confirm="ngModel" 
+                                 ngModel
+                                 required
+                                 >
+                        </div>
+                        <div *ngIf="user_password_confirm.invalid && user_password_confirm.touched" 
+                              class="alert alert-danger my-1 rounded-0">
+                            Password confirm is required
+                        </div> 
+                        <div *ngIf="user_password.value !== user_password_confirm.value && user_password_confirm.touched" 
+                              class="alert alert-danger my-1 rounded-0">
+                            Passwords are not equal
+                        </div> 
+
+                          <button type="submit" 
+                                  class="btn btn-dark btn-block" 
+                                  [disabled]="f.invalid || user_password.value !== user_password_confirm.value">
+                                Create your account
+                        </button>
+                      </form>          
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

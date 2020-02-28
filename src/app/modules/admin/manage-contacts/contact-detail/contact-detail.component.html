@@ -1,0 +1,11 @@
+<div class="card mt-sm-2 my-2" *ngIf="contact">
+	<div class="card-body">
+		<h4 class="my-2 txet-dark">Send by:</h4>
+		<p>Name: {{ contact.contact_username}}</p>
+		<p>Email : {{ contact.contact_email}}</p>	
+		<p>Create at : {{ contact.created_at.toDate()  | date:'short'}}</p>	
+		<hr>
+		<p>Message: {{ contact.contact_message}}</p>
+	</div>
+</div>	
+

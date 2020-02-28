@@ -1,0 +1,29 @@
+//==============================================================================================
+// NAVs
+//==============================================================================================
+
+.navbar{
+	background-color: $color-primary !important;
+	color: $body-text-color !important;
+	
+	.navbar-brand{
+		font-family: $font-header; }
+
+	a{
+		font-family: $font-body;
+		font-weight: bold !important;
+		color: $body-text-color !important;
+		text-transform: uppercase; }
+	.nav-link{
+		font-size: 15px; }
+}
+
+.active-link{
+	color: $color-primary !important;
+}
+
+.dashboard{
+	.nav{
+		background: $text-color	!important;
+	}	
+}

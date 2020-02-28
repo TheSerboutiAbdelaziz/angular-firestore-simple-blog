@@ -1,0 +1,49 @@
+//==============================================================================================
+// CARDS
+//==============================================================================================
+
+.card, .card-header, .card-body, .card-footr, .input-group-text{
+	border-radius: 0 !important;
+}
+
+.login-section,
+.register-section,
+.posts-list,
+.latest-posts,
+.post-detail,
+.contact-section{
+	.card{
+		.card-header, .input-group-text, button, a{
+			text-align: center;
+			color: $text-color !important;
+			background-color: $color-secondary-2 !important; }
+
+		.card-img-top{
+			border-radius: 0;
+			height: 232px !important; 
+			
+			img{
+				border-radius: 0;}
+		}
+
+		.card-header h5{
+			margin: 0; }
+
+		.input-group-text{
+			text-align: center !important;
+			width: 40px; 
+			
+			i{
+				margin: auto; }		
+		}
+
+		.input-group, button{
+			margin: 30px 0; }
+	}
+}
+
+.dashboard{
+	.card-header{		
+		background-color: $body-color !important; }	
+}
+

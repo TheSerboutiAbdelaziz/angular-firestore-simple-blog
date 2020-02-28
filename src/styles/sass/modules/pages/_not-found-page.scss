@@ -1,0 +1,35 @@
+//==============================================================================================
+// NOT FOUND PAGE
+//==============================================================================================
+
+.not-found-page{
+	background-image: url(/assets/images/slides/not-found-img.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 450px;
+	position: relative;
+	overflow: hidden;
+
+	.overlay{
+		@extend %overlay;
+		background-color: rgba(0,0,0,.7);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		.not-found-page-caption{
+			width: 700px auto;
+			text-align: center;
+			margin: auto;
+
+		    h3{
+		    	font-family: $font-header;
+		  		margin-bottom: 35px; }
+
+		    p{
+		 		line-height: 30px; }
+		}
+	}
+}
