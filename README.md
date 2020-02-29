@@ -12,9 +12,3 @@ A simple blog built with Angular 8 & Firebase 7
 
 - [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
 - [Font Awesome](https://fontawesome.com/icons)
-
-## Screenshots
-
-![](./screenshots/img-1.png)
-![](./screenshots/img-2.png)
-![](./screenshots/img-3.png)
