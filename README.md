@@ -8,8 +8,6 @@ A simple blog built with Angular 8 & Firebase 7
 
 ### Frontend
 
-#### Javascript
-
 - [Angular Framework](https://angular.io/start)
 
 - [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
@@ -17,6 +15,6 @@ A simple blog built with Angular 8 & Firebase 7
 
 ## Screenshots
 
-[]()
-[]()
-[]()
+[](screenshots/img-1.png)
+[](screenshots/img-2.png)
+[](screenshots/img-3.png)
