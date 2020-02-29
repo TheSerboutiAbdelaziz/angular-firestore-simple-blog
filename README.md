@@ -15,6 +15,6 @@ A simple blog built with Angular 8 & Firebase 7
 
 ## Screenshots
 
-[](screenshots/img-1.png)
-[](screenshots/img-2.png)
-[](screenshots/img-3.png)
+![](./screenshots/img-1.png)
+![](./screenshots/img-2.png)
+![](./screenshots/img-3.png)
